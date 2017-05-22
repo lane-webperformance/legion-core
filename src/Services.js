@@ -1,5 +1,7 @@
 'use strict';
 
+const metrics = require('legion-metrics');
+
 const Services = {};
 
 module.exports.prototype = Services;
