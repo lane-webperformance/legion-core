@@ -1,6 +1,7 @@
 'use strict';
 
 const metrics = require('legion-metrics');
+const ProblemCounter = require('./ProblemCounter');
 
 const Services = {};
 
@@ -66,11 +67,11 @@ Services.withController = function(controller) {
   return this.withService('controller', controller);
 };
 
-Services.getUserUniqueID = function() {
+Services.getUserUniqueId = function() {
   return this.getService('user_unique_id');
 };
 
-Services.withUserUniqueID = function(user_unique_id) {
+Services.withUserUniqueId = function(user_unique_id) {
   return this.withService('user_unique_id', user_unique_id);
 };
 
@@ -80,6 +81,14 @@ Services.getUserStorage = function() {
 
 Services.withUserStorage = function(user_storage) {
   return this.withService('user_storage', user_storage);
+};
+
+Services.getProblemCounter = function() {
+  return this.getService('problem_counter');
+};
+
+Services.initProblemCounter = function() {
+  return this.withService('problem_counter', ProblemCounter.create());
 };
 
 Services.key = function() {
