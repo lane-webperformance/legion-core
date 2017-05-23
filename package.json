@@ -10,9 +10,9 @@
   "author": "Christopher Lane Hinson <lane@webperformance.com>",
   "license": "APSL-2.0",
   "dependencies": {
-    "legion-io": "https://github.com/lane-webperformance/legion-io#v0.0.33",
-    "legion-metrics": "https://github.com/lane-webperformance/legion-metrics#v0.0.33",
-    "legion-control": "https://github.com/lane-webperformance/legion-control#v0.0.33",
+    "legion-io": "https://github.com/lane-webperformance/legion-io#v0.0.34",
+    "legion-metrics": "https://github.com/lane-webperformance/legion-metrics#v0.0.34",
+    "legion-control": "https://github.com/lane-webperformance/legion-control#v0.0.34",
     "ramda": "^0.23.0",
     "uuid": "^3.0.1"
   },
