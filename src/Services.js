@@ -41,9 +41,9 @@ Services.withMetricsReceiver = function(metrics_receiver) {
   return this.withService('metrics_receiver', metrics_receiver);
 };
 
-Services.tag = function() {
+Services.tag = function(tags) {
   const receiver = this.getMetricsReceiver();
-  return this.withMetricsReceiver(receiver.tag.apply(receiver, arguments));
+  return this.withMetricsReceiver(receiver.tag(tags));
 };
 
 Services.receive = function() {
