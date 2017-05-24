@@ -10,7 +10,7 @@ module.exports.load = (key) => Io.get().chain(services => services.getUserStorag
 module.exports.store = (key,value) => Io.get().chain(services => services.getUserStorage().key(key).store(value));
 
 module.exports.receive = (sample) => Io.get().chain(services => services.receive(sample));
-module.exports.tag = (tags, action) => Io.local(services => services.tag(tags), action);
+module.exports.tag = (tags, action) => Io.local(services => services.tag().apply(services, tags), action);
 
 module.exports.getUserUniqueId = () => Io.get().chain(services => services.getUserUniqueId());
 module.exports.getProjectKey = () => Io.get().chain(services => services.getProjectKey());
