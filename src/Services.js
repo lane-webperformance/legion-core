@@ -51,6 +51,14 @@ Services.receive = function() {
   return receiver.receive.apply(receiver, arguments);
 };
 
+Services.incrementProblems = function() {
+  if( this.getProblemCounter() )
+    this.getProblemCounter().increment();
+
+  if( this.getMetricsReceiver() )
+    this.getMetricsReceiver().incrementProblems();
+};
+
 Services.getProjectKey = function() {
   return this.getService('project_key');
 };
