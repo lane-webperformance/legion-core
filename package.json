@@ -1,6 +1,6 @@
 {
   "name": "legion-core",
-  "version": "0.0.50",
+  "version": "0.0.51",
   "description": "Legion load testing framework: core services",
   "main": "src/index.js",
   "scripts": {
@@ -10,9 +10,9 @@
   "author": "Christopher Lane Hinson <lane@webperformance.com>",
   "license": "APSL-2.0",
   "dependencies": {
+    "legion-control": "https://github.com/lane-webperformance/legion-control#v0.0.51",
     "legion-io": "https://github.com/lane-webperformance/legion-io#v0.0.51",
     "legion-metrics": "https://github.com/lane-webperformance/legion-metrics#v0.0.51",
-    "legion-control": "https://github.com/lane-webperformance/legion-control#v0.0.51",
     "ramda": "^0.23.0",
     "uuid": "^3.0.1"
   },
