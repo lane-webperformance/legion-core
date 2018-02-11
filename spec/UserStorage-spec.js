@@ -18,7 +18,7 @@ describe('The UserStorage mechanism', function() {
 
     Promise.resolve()
       .then(() => storage.key(7).store(7))
-      .then(done.fail).catch(done);
+      .then(done.fail).catch(() => done());
   });
 
   it('does not allow keys to contain periods', function(done) {
@@ -26,7 +26,7 @@ describe('The UserStorage mechanism', function() {
 
     Promise.resolve()
       .then(() => storage.key('number.seven').store(7))
-      .then(done.fail).catch(done);
+      .then(done.fail).catch(() => done());
   });
 
   it('throws an exception if a key cannot be found', function(done) {
@@ -34,7 +34,7 @@ describe('The UserStorage mechanism', function() {
 
     Promise.resolve()
       .then(() => storage.key('seven').load())
-      .then(done.fail).catch(done);
+      .then(done.fail).catch(() => done());
   });
 
   it('throws an exception if the same key is written twice', function(done) {
@@ -43,7 +43,7 @@ describe('The UserStorage mechanism', function() {
     Promise.resolve()
       .then(() => storage.key('seven').store('foo'))
       .then(() => storage.key('seven').store('bar'))
-      .then(done.fail).catch(done);
+      .then(done.fail).catch(() => done());
   });
 
   it('resists sneaky editing of stored values', function(done) {
