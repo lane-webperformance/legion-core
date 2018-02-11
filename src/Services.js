@@ -30,7 +30,7 @@ Services.getMetricsTarget = function() {
 
 Services.withMetricsTarget = function(metrics_target) {
   return this.withService('metrics_target', metrics_target)
-             .withService('metrics_receiver', metrics_target.receiver().tag(metrics.tags.generic('everything', 'everything')));
+    .withService('metrics_receiver', metrics_target.receiver().tag(metrics.tags.generic('everything', 'everything')));
 };
 
 Services.getMetricsReceiver = function() {
